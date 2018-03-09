@@ -21,7 +21,7 @@ function myFunctionDoW() {
   for (i=0; i<PoPLen; i++)
   {
     do {
-        text += "<br> The Police Available ID:"+i+" & Pri:"+PoliPri[i];
+        text += "<br> The Police Avail ID:"+i+" & Pri:"+PoliPri[i];
         i++;
     }
     while (PoliPri[i]==2|PoliPri[i]==3);
