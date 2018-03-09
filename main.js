@@ -14,8 +14,7 @@ function showPosition(position) {
 
 //>>DoWhile
 function myFunctionDoW() {
-    var i;
-    var text;
+    var i, text;
     var PoliPri = [3,1,3,2,3];
     var PoPLen = PoliPri.length;
   for (i=0; i<PoPLen; i++)
