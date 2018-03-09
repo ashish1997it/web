@@ -44,4 +44,19 @@ rootRef.on("child_added",snap => {
     $("#table_body").append("<tr><td>"+name+"</td><td>"+conno+"</td><td>"+pri+"</td></tr>");
 });
 
+
+var rootRef2 = firebase.database().ref().child("DB/PoliceDB");
+rootRef2.once('value',snap => {
+    var NoPol = snap.numChildren();
+    document.getElementById("demoHelp2").innerHTML = "Totlal Police: "+NoPol;
+
+    var text = "";
+    for (i=1; i<=NoPol; i++)
+    {
+      text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demoHelp3").innerHTML = "Police crr Avail: <br>"+text;
+});
+
+
 }
