@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Test 2
+</title>
+</head>
+<body>
+<h1>mySafetyApp</h1>
+
+<button onclick="getLocation()">getLocation</button>
+<p id="demo"></p>
+
+<button onclick="myFunctionDoW()">PoliPri</button>
+<p id="demoDoW"></p>
+
+<button onclick="myFunctionHelp()"> Help </button>
+<p id="demoHelp"></p>
+
+<br><br>
+<table border="1">
+<thead>
+<tr>
+  <td>Police Name</td>
+  <td>ConNo</td>
+  <td>Pri</td>
+</tr>
+</thead>
+<!--<tr>
+  <td>PoliJhon1</td>
+  <td>UserDavid1</td>
+  <td>8977553322</td>
+</tr>-->
+<tbody id="table_body">
+
+</tbody>
+</table>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyASgOKkYT_C25BWEjKK5Z3onXKvTJ_p5y4",
+      authDomain: "safetyapp0130.firebaseapp.com",
+      databaseURL: "https://safetyapp0130.firebaseio.com",
+      projectId: "safetyapp0130",
+      storageBucket: "safetyapp0130.appspot.com",
+      messagingSenderId: "566624114653"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+</html>
