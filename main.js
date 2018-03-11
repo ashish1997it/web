@@ -58,4 +58,26 @@ rootRef2.once('value',snap => {
 });
 
 
+const rooRef3 = firebase.database().ref();
+const refPD = rooRef3.child('DB').child('PoliceDB');
+const refUD = rooRef3.child('DB').child('UserDB');
+
+const ref2b = refPD.orderByChild('Pri').startAt(2);
+ref2b.on('value',snap => {
+    var ref2b2 = snap.child("Pri").val();
+    $("#demoHelp4").append("PoliCalcu: "+ref2b2);
+  });
+
+
+//>>mirror real time data, work fine
+const demoHelp4c = document.getElementById('demoHelp4c');
+const dbRef = firebase.database().ref().child('DB/PoliceDB/PoliA/EmailID');
+dbRef.on('value', snap => demoHelp4c.innerHTML = "EmailID: "+snap.val());
+
+
+//>>find poli has pri 2,3
+const demoHelp4d = document.getElementById('demoHelp4d');
+const dbRef2 = firebase.database().ref().child('DB').child('PoliceDB').orderByChild('Pri').startAt(2);
+dbRef2.on('value', snap => demoHelp4d.innerHTML = "PoliCalcu2: "+snap.val());
+
 }
